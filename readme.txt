@@ -4,7 +4,7 @@ Tags: woocommerce, xlsx, email, order, attachment
 Requires at least: 6.5
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -21,6 +21,10 @@ Ce plugin génère automatiquement un fichier Excel (.xlsx) contenant le détail
 3. Aucune configuration nécessaire : le fichier Excel est automatiquement joint aux e-mails de commande en cours
 
 == Changelog ==
+
+= 1.6.1 =
+* Fix - Séparateur décimal virgule dans la colonne « Prix d'achat HT » du XLSX.
+
 
 = 1.6.0 =
 * Update - Renommage du slug : woo-order-complete-email-attachment → woo-order-email-attachment.
