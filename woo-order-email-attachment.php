@@ -5,7 +5,7 @@
  * Description:       Attache un bon de commande XLSX à l'e-mail « Commande en cours » de WooCommerce.
  * Version: 1.6.2
  * Requires at least: 6.5
- * Requires PHP:      7.4
+ * Requires PHP:      8.0
  * Author:            Yves Saint-Lary
  * Author URI:        https://ysaintlary.com
  * License:           GPL-3.0-or-later
