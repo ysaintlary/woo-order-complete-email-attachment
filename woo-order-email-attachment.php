@@ -3,7 +3,7 @@
  * Plugin Name:       YS | Woo Order Email Attachment
  * Plugin URI:        https://github.com/ysaintlary/woo-order-email-attachment
  * Description:       Attache un bon de commande XLSX à l'e-mail « Commande en cours » de WooCommerce.
- * Version: 1.5.0
+ * Version: 1.6.0
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author:            Yves Saint-Lary

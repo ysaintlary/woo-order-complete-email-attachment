@@ -4,7 +4,7 @@ Tags: woocommerce, xlsx, email, order, attachment
 Requires at least: 6.5
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.5.0
+Stable tag: 1.6.0
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -22,10 +22,14 @@ Ce plugin génère automatiquement un fichier Excel (.xlsx) contenant le détail
 
 == Changelog ==
 
-= 1.5.0 =
-* Update - Renommage complet du plugin (slug, fichier, ZIP, préfixe) : csv-order-attachment → woo-order-email-attachment.
-* Update - Plugin Name : « YS | Woo Order Email Attachment ».
+= 1.6.0 =
+* Update - Renommage du slug : woo-order-complete-email-attachment → woo-order-email-attachment.
 * Update - Le bon de commande XLSX est désormais joint à l'e-mail « Commande en cours » (au lieu de « Commande terminée »).
+* Fix - Mise à jour des références dans .wp-plugin-base.env et le Runtime Updater.
+
+= 1.5.0 =
+* Update - Renommage complet du plugin (slug, fichier, ZIP, préfixe) : csv-order-attachment → woo-order-complete-email-attachment.
+* Update - Plugin Name : « YS | Woo Order Email Attachment ».
 
 = 1.4.0 =
 * Update - Renommage du repo GitHub (sls-csv-order-attachment → csv-order-attachment).
