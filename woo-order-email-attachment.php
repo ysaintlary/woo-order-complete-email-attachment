@@ -3,7 +3,7 @@
  * Plugin Name:       YS | Woo Order Email Attachment
  * Plugin URI:        https://github.com/ysaintlary/woo-order-email-attachment
  * Description:       Attache un bon de commande XLSX à l'e-mail « Commande en cours » de WooCommerce.
- * Version: 1.6.1
+ * Version: 1.6.2
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author:            Yves Saint-Lary
@@ -127,7 +127,7 @@ function WOCEA_attach_xlsx( $attachments, $email_id, $order, $email ) { // phpcs
 		'Gencod'           => 'string',
 		"Libellé article"  => 'string',
 		'Quantité'         => 'integer',
-		"Prix d'achat HT"  => 'string',
+		"Prix d'achat HT"  => '#,##0.00',
 	);
 
 	$writer->writeSheetHeader( 'Bon de commande', $header, array( 'suppress_row' => false ) ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
@@ -144,7 +144,7 @@ function WOCEA_attach_xlsx( $attachments, $email_id, $order, $email ) { // phpcs
 		$qty     = $item->get_quantity();
 		$price   = (float) $order->get_item_total( $item, false, false );
 
-		$writer->writeSheetRow( 'Bon de commande', array( (string) $order_number, $sku, $ean, $name, $qty, number_format( $price, 2, ',', '' ) ) ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
+		$writer->writeSheetRow( 'Bon de commande', array( (string) $order_number, $sku, $ean, $name, $qty, $price ) ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
 	}
 
 	$writer->writeToFile( $file_path ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
