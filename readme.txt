@@ -8,23 +8,24 @@ Stable tag: 1.5.0
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Attache un bon de commande XLSX à l'e-mail « Commande terminée » de WooCommerce.
+Attache un bon de commande XLSX à l'e-mail « Commande en cours » de WooCommerce.
 
 == Description ==
 
-Ce plugin génère automatiquement un fichier Excel (.xlsx) contenant le détail des articles commandés et le joint à l'e-mail « Commande terminée » envoyé au client.
+Ce plugin génère automatiquement un fichier Excel (.xlsx) contenant le détail des articles commandés et le joint à l'e-mail « Commande en cours » envoyé au client.
 
 == Installation ==
 
-1. Téléverser le dossier `woo-order-complete-email-attachment` dans `/wp-content/plugins/`
+1. Téléverser le dossier `woo-order-email-attachment` dans `/wp-content/plugins/`
 2. Activer le plugin via le menu « Extensions » de WordPress
-3. Aucune configuration nécessaire : le fichier Excel est automatiquement joint aux e-mails de commande terminée
+3. Aucune configuration nécessaire : le fichier Excel est automatiquement joint aux e-mails de commande en cours
 
 == Changelog ==
 
 = 1.5.0 =
-* Update - Renommage complet du plugin (slug, fichier, ZIP, préfixe) : csv-order-attachment → woo-order-complete-email-attachment.
+* Update - Renommage complet du plugin (slug, fichier, ZIP, préfixe) : csv-order-attachment → woo-order-email-attachment.
 * Update - Plugin Name : « YS | Woo Order Email Attachment ».
+* Update - Le bon de commande XLSX est désormais joint à l'e-mail « Commande en cours » (au lieu de « Commande terminée »).
 
 = 1.4.0 =
 * Update - Renommage du repo GitHub (sls-csv-order-attachment → csv-order-attachment).

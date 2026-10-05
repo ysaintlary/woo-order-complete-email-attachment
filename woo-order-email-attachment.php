@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:       YS | Woo Order Email Attachment
- * Plugin URI:        https://github.com/ysaintlary/woo-order-complete-email-attachment
- * Description:       Attache un bon de commande XLSX à l'e-mail « Commande terminée » de WooCommerce.
+ * Plugin URI:        https://github.com/ysaintlary/woo-order-email-attachment
+ * Description:       Attache un bon de commande XLSX à l'e-mail « Commande en cours » de WooCommerce.
  * Version: 1.5.0
  * Requires at least: 6.5
  * Requires PHP:      7.4
@@ -10,7 +10,7 @@
  * Author URI:        https://ysaintlary.com
  * License:           GPL-3.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:       woo-order-complete-email-attachment
+ * Text Domain:       woo-order-email-attachment
  * Domain Path:       /languages
  * Requires Plugins:  woocommerce
  * WC requires at least: 9.1
@@ -75,7 +75,7 @@ function WOCEA_get_ean( $product ) { // phpcs:ignore WordPress.NamingConventions
  */
 function WOCEA_get_upload_dir() { // phpcs:ignore WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid
 	$upload_dir = wp_upload_dir();
-	$dir        = trailingslashit( $upload_dir['basedir'] ) . 'woo-order-complete-email-attachment';
+	$dir        = trailingslashit( $upload_dir['basedir'] ) . 'woo-order-email-attachment';
 
 	if ( ! file_exists( $dir ) ) {
 		wp_mkdir_p( $dir );
@@ -104,7 +104,7 @@ function WOCEA_get_upload_dir() { // phpcs:ignore WordPress.NamingConventions.Va
  * @return array Modified attachments.
  */
 function WOCEA_attach_xlsx( $attachments, $email_id, $order, $email ) { // phpcs:ignore WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid, Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed
-	if ( 'customer_completed_order' !== $email_id ) {
+	if ( 'customer_processing_order' !== $email_id ) {
 		return $attachments;
 	}
 

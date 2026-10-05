@@ -19,7 +19,7 @@ $wp_plugin_base_runtime_updater_should_bootstrap = (
 
 if ( function_exists( 'apply_filters' ) ) {
 	$wp_plugin_base_runtime_updater_should_bootstrap = (bool) apply_filters(
-		'woo-order-complete-email-attachment_runtime_updater_should_bootstrap',
+		'woo-order-email-attachment_runtime_updater_should_bootstrap',
 		$wp_plugin_base_runtime_updater_should_bootstrap
 	);
 }
@@ -39,10 +39,10 @@ if ( ! class_exists( '\\YahnisElsts\\PluginUpdateChecker\\v5\\PucFactory' ) ) {
 	return;
 }
 
-$wp_plugin_base_runtime_updater_main_file  = dirname( dirname( __DIR__ ) ) . '/woo-order-complete-email-attachment.php';
-$wp_plugin_base_runtime_updater_source_url = 'https://github.com/ysaintlary/woo-order-complete-email-attachment';
+$wp_plugin_base_runtime_updater_main_file  = dirname( dirname( __DIR__ ) ) . '/woo-order-email-attachment.php';
+$wp_plugin_base_runtime_updater_source_url = 'https://github.com/ysaintlary/woo-order-email-attachment';
 $wp_plugin_base_runtime_updater_provider   = 'github-release';
-$wp_plugin_base_runtime_updater_slug       = 'woo-order-complete-email-attachment';
+$wp_plugin_base_runtime_updater_slug       = 'woo-order-email-attachment';
 
 if (
 	file_exists( $wp_plugin_base_runtime_updater_main_file )
